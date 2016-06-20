@@ -84,6 +84,12 @@ position: absolute;
   margin: auto;
   position: relative;
 }
+#mainpic-2{
+  height: 100vh;
+  width:100%;
+  margin: auto;
+  position: relative;
+}
 .footer{
  background-color: black;
  width: 100%;
@@ -209,4 +215,44 @@ position: absolute;
   margin-top: -25vh;
   margin-left: 25vw;
   z-index: 2;
+}
+
+/******* PAGE 2 *******/
+
+.text-column-left{
+  height: 75vh;
+  width: 30vw;
+  border: 1px solid red;
+  position: absolute;
+  z-index: 3;
+  margin-top: -85vh;
+  margin-left: 5vw;
+  background-color: black;
+  opacity: .7;
+}
+
+.text-column-bottom-right{
+  height:20vh;
+  width:50vw;
+  position: absolute;
+  z-index: 3;
+  margin-top: -30vh;
+  margin-left: 45vw;
+  background-color: black;
+  opacity: .7;
+  border: 1px solid red;
+
+}
+.map-position{
+  height:40vh;
+  width:40vw;
+  position: absolute;
+  z-index: 3;
+  margin-top: -85vh;
+  margin-left: 55vw;
+  background-color: black;
+  opacity: .7;
+  border: 1px solid red;
+
+
 }
