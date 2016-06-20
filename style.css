@@ -6,11 +6,10 @@
   /*border: 1px solid green;*/
   opacity: .7;
   z-index: 1;
-  margin-top: -1px;
+
 }
 
 .header-text{
-/*border: 1px solid white;*/
 height: 8vh;
 width: 40vw;
 margin-left: 2.5vw;
@@ -22,7 +21,6 @@ position: absolute;
 .nav1{
   height: 8vh;
   width: 20vw;
-  /*border: 1px solid yellow;*/
   margin-left: 75vw;
   margin-top: 1vh;
   position: absolute;
@@ -31,19 +29,25 @@ position: absolute;
 
 #style-nav1{
   list-style-type: none;
-  color:   #3EE9EA;
+  color: #3EE9EA;
   position: absolute;
   font-size: 2.1em;
-  margin-left: 0vw;
   font-family: myriad pro;
 }
 #style-nav2{
   list-style-type: none;
-  color:   #3EE9EA;
+  color: #3EE9EA;
   position: absolute;
   font-size: 2.1em;
-  margin-left: 11vw;
+  margin-left: 10vw;
   font-family: myriad pro;
+}
+
+#style-nav2:hover{
+  color: #EC866E;
+}
+#style-nav1:hover{
+  color: #EC866E;
 }
 
 
@@ -52,7 +56,6 @@ position: absolute;
 .iDive-position{
   height:10vh;
   width: 8vw;
-  /*border: 1px solid white;*/
   position: absolute;
   z-index: 2;
   margin-left: 2vw;
@@ -62,7 +65,7 @@ position: absolute;
   font-size: 3em;
   color: #3EE9EA;
   /*border: 1px solid yellow;*/
-  margin: 18px 9px auto;
+  margin: 2.5vh 1vw auto;
   z-index: 0;
   position: absolute;
   font-family: myriad pro;
@@ -85,7 +88,7 @@ position: absolute;
  background-color: black;
  width: 100%;
  height: 7vh;
- margin-top: -.5vh;
+ margin-top: -5vh;
  position: absolute;
 }
 .button-box{
@@ -102,7 +105,7 @@ position: absolute;
   width: 16vw;
   background-color: #EC866E;
   color: black;
-  font-size: 40px;
+  font-size: 2.1em;
   font-weight: bold;
   font-family: myriad-pro;
   border-radius: 10px;
@@ -121,7 +124,6 @@ position: absolute;
   position: absolute;
   margin-left: 35vh;
   margin-top: -105vh;
-  /*border: 1px solid yellow;*/
 }
 
 .main-logo{
