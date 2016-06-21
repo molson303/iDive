@@ -1,6 +1,7 @@
 var button = document.getElementById('btn')
 var httpRequest = new XMLHttpRequest();
 var userInput = document.getElementsByTagName('input')[0]
+var textColumnLeft = document.getElementById('sites')
 var long;
 var lat;
 
@@ -26,11 +27,15 @@ function getDiveSites(lat, long){
   if(httpRequest.readyState === 4){
     if(httpRequest.status < 400){
       var object2 = JSON.parse(httpRequest.responseText)
-        console.log(object2)
-
+        for (var i = 0; i < object2.sites.length; i++) {
+        var option = document.createElement("option")
+        console.log(object2.sites[i].name)
+        option.innerHTML = object2.sites[i].name;
+        textColumnLeft.appendChild(option)
+          }
         }
       }
     }
-    httpRequest.open('GET', 'http://api.divesites.com/?mode=sites&lat=' + lat +'&lng=' + long + '&dist=25')
+    httpRequest.open('GET', 'http://api.divesites.com/?mode=sites&lat=' + lat +'&lng=' + long + '&dist=30')
     httpRequest.send();
 }
