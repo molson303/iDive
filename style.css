@@ -36,7 +36,6 @@ position: fixed;
   position: absolute;
   z-index: 2;
   position: fixed;
-  /*border: 1px solid blue;*/
 }
 
 #style-nav1{
@@ -327,4 +326,11 @@ option{
   font-family: myriad pro;
   z-index: 1;
   text-align: center;
+}
+optgroup{
+  color: #fff;
+  font-family: myriad pro;
+  z-index: 1;
+  text-align: center;
+
 }

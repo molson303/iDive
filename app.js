@@ -29,10 +29,15 @@ function getDiveSites(lat, long){
       var object2 = JSON.parse(httpRequest.responseText)
         for (var i = 0; i < object2.sites.length; i++) {
         var option = document.createElement("option")
-        console.log(object2.sites[i].name)
+        var option1 = document.createElement("option")
+        var option2 = document.createElement("option")
+
         textColumnLeft1.appendChild(option)
         option.innerHTML = object2.sites[i].name;
-
+        textColumnLeft1.appendChild(option1)
+        option1.innerHTML = "Latitude" + " " + object2.sites[i].lat;
+        textColumnLeft1.appendChild(option2)
+        option2.innerHTML = "Longitude" + " " + object2.sites[i].lng;
           }
         }
       }
