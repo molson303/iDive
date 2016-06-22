@@ -30,6 +30,8 @@
       </ul></a>
     </nav>
     <main>
+      <div class="circle"></div>
+      <div class="circle2"></div>
       <section>
         <img id="mainpic" src="images/DSC_0012.JPG" alt="" />
       </section>
@@ -40,13 +42,17 @@
       </section>
       <section>
         <div class="slogan-location">
-            <h3 class="slogan">International Diving</h3>
+            <h3 class="slogan">International</h3>
+        </div>
+        <div class="slogan-location1">
+          <h3 id="slogan1">Diving</h3>
         </div>
       </section>
       <section>
         <div class="find-your-site-background-location"></div>
       </section>
       <section>
+
         <div class="find-your-site-background-location2">
           <h3 class="find-your-site-style">Find Your Dive Site</h3>
         </div>
@@ -64,24 +70,26 @@
         <input id="btn" class="button-style" type="button" name="name" value="Let's Dive!"></a>
       </section>
     </main>
-<section class="middle"></section>
-<br>
 <div id="secondpage"></div>
+<section class="middle"></section>
 <div id="button"></div>
 <section>
   <img id="mainpic-2" src="images/diver.jpg" alt="" />
 </section>
+
 <section class="textColumnLeft"></section>
 
 <select multiple class="textColumnLeft1" id="text-column-one" name="Dive Sites">
+  <optgroup id="sites" label="Dive Sites">
 
-<optgroup id="sites" label="Dive Sites">
-
-</optgroup>
+  </optgroup>
 </select>
 
 <section class="text-column-bottom-right"></section>
-<section class="map-position"></section>
+
+<section class="map-position" id="map"></section>
+
+
 <footer>
   <div class="footer">
     <div class="copyWloc">
@@ -89,6 +97,12 @@
     </div>
   </div>
 </footer>
+<script type="text/javascript" src="map.js"></script>
+
+<script async defer
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQCYF5J4WLoGgVdiF1R90FDDmWoVrMqP8&callback=initMap">
+   </script>
+
   <script type="text/javascript" src="app.js"></script>
   </body>
 </html>

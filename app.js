@@ -8,6 +8,8 @@ var lat;
 var option;
 var option1;
 var option2;
+var option3;
+
 
 button.addEventListener("click", function(event) {
   httpRequest.onreadystatechange = function(){
@@ -17,6 +19,7 @@ button.addEventListener("click", function(event) {
       long = (object.results[0].geometry.location.lng)
       lat = (object.results[0].geometry.location.lat);
       getDiveSites(lat, long);
+
         }
       }
     }
@@ -30,18 +33,26 @@ function getDiveSites(lat, long){
   if(httpRequest.readyState === 4){
     if(httpRequest.status < 400){
       var object2 = JSON.parse(httpRequest.responseText)
+
         for (var i = 0; i < object2.sites.length; i++) {
+
         option = document.createElement("option")
         option1 = document.createElement("option")
         option2 = document.createElement("option")
+        option3 = document.createElement("option")
+
+        option.style.color = "red";
+
 
         textColumnLeft1.appendChild(option)
         option.innerHTML = object2.sites[i].name;
         textColumnLeft1.appendChild(option1)
-        option1.innerHTML = "Latitude" + " " + object2.sites[i].lat;
+        option1.innerHTML = "Latitude" + " " + object2.sites[i].lat + ", " + " " + "Longitude" + " " + object2.sites[i].lng;
         textColumnLeft1.appendChild(option2)
-        option2.innerHTML = "Longitude" + " " + object2.sites[i].lng;
-          }
+        option2.innerHTML = object2.sites[i].distance + " " + "Miles from the Longitute and Latitude of" + " " + userInput.value;
+            }
+
+
         }
       }
     }
@@ -55,16 +66,22 @@ localDive.addEventListener("click", function(event) {
     if(httpRequest.status < 400){
       var object3 = JSON.parse(httpRequest.responseText)
       for (var i = 0; i < object3.sites.length; i++) {
+        console.log(object3.request.loc.name)
         option = document.createElement("option")
         option1 = document.createElement("option")
         option2 = document.createElement("option")
+        option3 = document.createElement("option")
+
 
         textColumnLeft1.appendChild(option)
         option.innerHTML = object3.sites[i].name;
+        textColumnLeft1.appendChild(option3)
+        option3.innerHTML = object3.request.loc.name;
         textColumnLeft1.appendChild(option1)
-        option1.innerHTML = "Latitude" + " " + object3.sites[i].lat;
+        option1.innerHTML = "Latitude" + " " + object3.sites[i].lat + ", " + " " +"Longitude" + " " + object3.sites[i].lng;
         textColumnLeft1.appendChild(option2)
-        option2.innerHTML = "Longitude" + " " + object3.sites[i].lng;
+        option2.innerHTML = object3.sites[i].distance + " " + "Miles from the Longitute and Latitude Coordinates"
+
       }
     }
   }
