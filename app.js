@@ -1,7 +1,7 @@
 var button = document.getElementById('btn')
 var httpRequest = new XMLHttpRequest();
 var userInput = document.getElementsByTagName('input')[0]
-var textColumnLeft = document.getElementById('sites')
+var textColumnLeft1 = document.getElementById('text-column-one')
 var long;
 var lat;
 
@@ -30,8 +30,9 @@ function getDiveSites(lat, long){
         for (var i = 0; i < object2.sites.length; i++) {
         var option = document.createElement("option")
         console.log(object2.sites[i].name)
+        textColumnLeft1.appendChild(option)
         option.innerHTML = object2.sites[i].name;
-        textColumnLeft.appendChild(option)
+
           }
         }
       }

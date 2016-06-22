@@ -3,7 +3,7 @@
   width: 100%;
   height: 11vh;
   opacity: .7;
-  z-index: 1;
+  z-index: 2;
   position: fixed;
 }
 
@@ -19,12 +19,24 @@ position: fixed;
 /****NAV BAR****/
 .nav1{
   height: 8vh;
-  width: 26vw;
+  width: 10vw;
   margin-left: 71vw;
+  margin-top: 1.1vh;
+  position: absolute;
+  z-index: 2;
+  position: fixed;
+  border-right: thick solid #fff;
+}
+
+.nav2{
+  height: 8vh;
+  width: 15vw;
+  margin-left: 82vw;
   margin-top: 1vh;
   position: absolute;
   z-index: 2;
   position: fixed;
+  /*border: 1px solid blue;*/
 }
 
 #style-nav1{
@@ -40,8 +52,10 @@ position: fixed;
   color: #3EE9EA;
   position: absolute;
   font-size: 2.1em;
-  margin-left: 11vw;
+  margin-left: 0vw;
   font-family: myriad pro;
+  margin-top: 2.15vh;
+
 }
 
 #style-nav2:hover{
@@ -86,7 +100,7 @@ position: fixed;
   position: relative;
 }
 #mainpic-2{
-  height: 115vh;
+  height: 105vh;
   width:100%;
   margin: -1vh auto;
   position: relative;
@@ -105,7 +119,7 @@ position: fixed;
   position: absolute;
   margin-left: 107vh;
   margin-top: -24vh;
-  z-index: 2;
+  z-index: 1;
   /*border: 1px solid black;*/
 }
 .button-style{
@@ -200,6 +214,7 @@ position: fixed;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 
+
 }
 .text{
   height: 5vh;
@@ -218,7 +233,7 @@ position: fixed;
   position: absolute;
   margin-top: -25vh;
   margin-left: 25vw;
-  z-index: 2;
+  z-index: 1;
 }
 
 .copyWloc{
@@ -244,14 +259,24 @@ position: fixed;
 
 .textColumnLeft{
   height: 75vh;
-  width: 30vw;
-  border: 1px solid red;
+  width: 35vw;
   position: absolute;
   z-index: 1;
   margin-top: -90vh;
   margin-left: 5vw;
   background-color: black;
-  opacity: .7;
+  opacity: .6;
+}
+
+.textColumnLeft1{
+  height: 75vh;
+  width: 35vw;
+  position: absolute;
+  z-index: 1;
+  margin-top: -90vh;
+  margin-left: 5vw;
+  background-color: transparent;
+  overflow-y: scroll;
 }
 
 .text-column-bottom-right{
@@ -287,4 +312,19 @@ position: fixed;
   position: absolute;
   z-index: 1;
   opacity: .9;
+}
+#sites{
+  color: #fff;
+  font-family: myriad pro;
+  font-size: 1.8em;
+  text-align: center;
+  z-index: 1;
+  color: #EC866E;
+
+}
+option{
+  color: #fff;
+  font-family: myriad pro;
+  z-index: 1;
+  text-align: center;
 }
