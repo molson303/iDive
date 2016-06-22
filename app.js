@@ -3,12 +3,16 @@ var httpRequest = new XMLHttpRequest();
 var userInput = document.getElementsByTagName('input')[0]
 var textColumnLeft1 = document.getElementById('text-column-one')
 var localDive = document.getElementById('style-nav2')
+var script = document.createElement('script');
 var long;
 var lat;
 var option;
 var option1;
 var option2;
 var option3;
+var optgroup;
+var map;
+var marker;
 
 
 button.addEventListener("click", function(event) {
@@ -33,17 +37,14 @@ function getDiveSites(lat, long){
   if(httpRequest.readyState === 4){
     if(httpRequest.status < 400){
       var object2 = JSON.parse(httpRequest.responseText)
-
         for (var i = 0; i < object2.sites.length; i++) {
-
         option = document.createElement("option")
         option1 = document.createElement("option")
         option2 = document.createElement("option")
         option3 = document.createElement("option")
-
-        option.style.color = "red";
-
-
+        optgroup = document.createElement('optgroup')
+        textColumnLeft1.appendChild(optgroup)
+        optgroup.innerHTML = "";
         textColumnLeft1.appendChild(option)
         option.innerHTML = object2.sites[i].name;
         textColumnLeft1.appendChild(option1)
@@ -51,11 +52,9 @@ function getDiveSites(lat, long){
         textColumnLeft1.appendChild(option2)
         option2.innerHTML = object2.sites[i].distance + " " + "Miles from the Longitute and Latitude of" + " " + userInput.value;
             }
-
-
+          }
         }
       }
-    }
     httpRequest.open('GET', 'http://api.divesites.com/?mode=sites&lat=' + lat +'&lng=' + long + '&dist=30')
     httpRequest.send();
 }
@@ -66,13 +65,13 @@ localDive.addEventListener("click", function(event) {
     if(httpRequest.status < 400){
       var object3 = JSON.parse(httpRequest.responseText)
       for (var i = 0; i < object3.sites.length; i++) {
-        console.log(object3.request.loc.name)
         option = document.createElement("option")
         option1 = document.createElement("option")
         option2 = document.createElement("option")
         option3 = document.createElement("option")
-
-
+        optgroup = document.createElement('optgroup')
+        textColumnLeft1.appendChild(optgroup)
+        optgroup.innerHTML = "";
         textColumnLeft1.appendChild(option)
         option.innerHTML = object3.sites[i].name;
         textColumnLeft1.appendChild(option3)
@@ -86,7 +85,21 @@ localDive.addEventListener("click", function(event) {
     }
   }
 }
-
       httpRequest.open('GET', 'http://api.divesites.com/?mode=&dist=60')
       httpRequest.send();
-    })
+});
+
+function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: new google.maps.LatLng(2.8,-187.3),
+          mapTypeId: google.maps.MapTypeId.TERRAIN
+          })
+}
+//         marker = new google.maps.Marker({
+//           position: {
+//             lat: 2.8,
+//             lng: 187.3
+//           },
+//           // map: map,
+// };

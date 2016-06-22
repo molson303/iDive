@@ -89,9 +89,10 @@ position: fixed;
 #idive-header-slogan{
   font-size: 1.3em;
   color: #3EE9EA;
-  margin: 2.5vw 8.5vw auto;
+  margin: 2.5vw 8.9vw auto;
   position: absolute;
-  font-family: myriad pro;
+  font-family: sans-serif;
+  font-weight: 300;
 
 }
 #mainpic{
@@ -160,11 +161,10 @@ position: fixed;
 .slogan-location{
   height: 10vh;
   width: 10vw;
-  margin-top: -55vh;
+  margin-top: -54.9vh;
   margin-left: 40vw;
   position: absolute;
   text-align: center;
-  /*border: 1px solid yellow;*/
 }
 .slogan-location1{
   height: 8vh;
@@ -174,21 +174,21 @@ position: fixed;
   position: absolute;
   text-align: center;
   border-left:thick solid #EC866E;
-  /*border: 1px solid black;*/
 }
 .slogan{
   color: #fff;
   font-size: 1.6em;
-  font-family: myriad pro;
+  font-weight: 200;
+  font-family: sans-serif;
 }
 
 #slogan1{
   color: #EC866E;
   font-size: 1.8em;
-  font-family: myriad pro;
   font-weight: 200;
   margin-left: -1.3vw;
   margin-top: 2.2vh;
+  font-family: sans-serif;
 }
 
 .find-your-site-background-location{
@@ -234,8 +234,6 @@ position: fixed;
   border-bottom-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-
-
 }
 .text{
   height: 5vh;
@@ -246,7 +244,6 @@ position: fixed;
   margin-top: 1.5vh;
   margin-left: 1.3vw;
   background-color: #dbdbdb;
-
 }
 .text-input-location{
   height: 9vh;
@@ -256,7 +253,6 @@ position: fixed;
   margin-left: 25vw;
   z-index: 1;
 }
-
 .copyWloc{
   margin-top: 1vh;
   height:7vh;
@@ -265,7 +261,6 @@ position: fixed;
   margin-left: 40vw;
   border: 1px solid black;
 }
-
 #copywrite{
   color: #fff;
   font-family: myriad pro;
@@ -370,7 +365,7 @@ p{
   border: 2px solid #EC866E;
   height: .5vh;
   width: .3vw;
-  position: absolute;
+  position: fixed;
   z-index: 2;
   margin-left: 3.1vw;
   margin-top: 3.4vh;
