@@ -12,10 +12,7 @@ var option2;
 var option3;
 var optgroup;
 var map;
-var marker;
-var localNames
-var latLocal
-var longLocal
+
 
 
 button.addEventListener("click", function(event) {
@@ -68,14 +65,19 @@ localDive.addEventListener("click", function(event) {
     if(httpRequest.status < 400){
       var object3 = JSON.parse(httpRequest.responseText)
       for (var i = 0; i < object3.sites.length; i++) {
+        localName = object3.sites[i].name;
+        localLat = Number(object3.sites[i].lat);
+        localLong = Number(object3.sites[i].lng);
+        console.log(localLong)
+        var marker = new google.maps.Marker({
+          position: {lat: localLat, lng: localLong},
+          map: map
+        });
         option = document.createElement("option")
         option1 = document.createElement("option")
         option2 = document.createElement("option")
         option3 = document.createElement("option")
         optgroup = document.createElement('optgroup')
-        localNames = object3.sites[i].name;
-        latLocal = object3.sites[i].lat;
-        longLocal = object3.sites[i].long;
         textColumnLeft1.appendChild(optgroup)
         optgroup.innerHTML = "";
         textColumnLeft1.appendChild(option)
@@ -86,7 +88,6 @@ localDive.addEventListener("click", function(event) {
         option1.innerHTML = "Latitude" + " " + object3.sites[i].lat + ", " + " " +"Longitude" + " " + object3.sites[i].lng;
         textColumnLeft1.appendChild(option2)
         option2.innerHTML = object3.sites[i].distance + " " + "Miles from the Longitute and Latitude Coordinates"
-        // getLocalInfo(localNames, latLocal, longLocal);
 
       }
 
@@ -97,8 +98,10 @@ localDive.addEventListener("click", function(event) {
       httpRequest.send();
 });
 
+
+
 function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
+ map = new google.maps.Map(document.getElementById('map'), {
     zoom: 10,
     center: {lat: -33.9, lng: 151.2}
   });
@@ -106,42 +109,25 @@ function initMap() {
   setMarkers(map);
 }
 
-// function getLocalInfo(localNames, latLocal, longLocal){
-  function setMarkers(map) {
-  // Adds markers to the map.
 
-  // Marker sizes are expressed as a Size of X,Y where the origin of the image
-  // (0,0) is located in the top left of the image.
+var beaches = [
+  ['Bondi Beach', -33.890542, 151.274856, 4],
 
-  // Origins, anchor positions and coordinates of the marker increase in the X
-  // direction to the right and in the Y direction down.
+];
+
+function setMarkers(map) {
+  console.log("lower:"+map);
   var image = {
     url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-    // This marker is 20 pixels wide by 32 pixels high.
     size: new google.maps.Size(20, 32),
-    // The origin for this image is (0, 0).
     origin: new google.maps.Point(0, 0),
-    // The anchor for this image is the base of the flagpole at (0, 32).
     anchor: new google.maps.Point(0, 32)
   };
-  // Shapes define the clickable region of the icon. The type defines an HTML
-  // <area> element 'poly' which traces out a polygon as a series of X,Y points.
-  // The final coordinate closes the poly by connecting to the first coordinate.
+
   var shape = {
     coords: [1, 1, 1, 20, 18, 20, 18, 1],
     type: 'poly'
   };
-
-
-  var beaches = [
-  ['Bondi Beach', -33.890542, 151.274856, 4],
-  ['Coogee Beach', -33.923036, 151.259052, 5],
-  ['Cronulla Beach', -34.028249, 151.157507, 3],
-  ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
-  ['Maroubra Beach', -33.950198, 151.259302, 1]
-];
-
-
   for (var i = 0; i < beaches.length; i++) {
     var beach = beaches[i];
     var marker = new google.maps.Marker({
@@ -151,8 +137,6 @@ function initMap() {
       shape: shape,
       title: beach[0],
       zIndex: beach[3]
-      });
-    }
-
+    });
   }
-// }
+}
