@@ -13,6 +13,9 @@ var option3;
 var optgroup;
 var map;
 var marker;
+var localNames
+var latLocal
+var longLocal
 
 
 button.addEventListener("click", function(event) {
@@ -25,7 +28,7 @@ button.addEventListener("click", function(event) {
       getDiveSites(lat, long);
 
         }
-      }
+      }    //here I am getting the latitude and Longitude from the location that requested.
     }
 
     httpRequest.open('GET', 'https://maps.googleapis.com/maps/api/geocode/json?address=' + userInput.value +'&key=AIzaSyA42x7FNCeCrCZZiLRep6SE2sVWjT_dDrA')
@@ -52,7 +55,7 @@ function getDiveSites(lat, long){
         textColumnLeft1.appendChild(option2)
         option2.innerHTML = object2.sites[i].distance + " " + "Miles from the Longitute and Latitude of" + " " + userInput.value;
             }
-          }
+          }  //The lat and long is then passed into the dive API to retrieve the locations.
         }
       }
     httpRequest.open('GET', 'http://api.divesites.com/?mode=sites&lat=' + lat +'&lng=' + long + '&dist=30')
@@ -70,6 +73,9 @@ localDive.addEventListener("click", function(event) {
         option2 = document.createElement("option")
         option3 = document.createElement("option")
         optgroup = document.createElement('optgroup')
+        localNames = object3.sites[i].name;
+        latLocal = object3.sites[i].lat;
+        longLocal = object3.sites[i].long;
         textColumnLeft1.appendChild(optgroup)
         optgroup.innerHTML = "";
         textColumnLeft1.appendChild(option)
@@ -80,9 +86,11 @@ localDive.addEventListener("click", function(event) {
         option1.innerHTML = "Latitude" + " " + object3.sites[i].lat + ", " + " " +"Longitude" + " " + object3.sites[i].lng;
         textColumnLeft1.appendChild(option2)
         option2.innerHTML = object3.sites[i].distance + " " + "Miles from the Longitute and Latitude Coordinates"
+        // getLocalInfo(localNames, latLocal, longLocal);
 
       }
-    }
+
+    }     //no lat or long needs to be passed into this since no parameters are used it defaults to the users location.
   }
 }
       httpRequest.open('GET', 'http://api.divesites.com/?mode=&dist=60')
@@ -97,17 +105,9 @@ function initMap() {
 
   setMarkers(map);
 }
-// var beaches = [
-//   ['Bondi Beach', -33.890542, 151.274856, 4],
-//   ['Coogee Beach', -33.923036, 151.259052, 5],
-//   ['Cronulla Beach', -34.028249, 151.157507, 3],
-//   ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
-//   ['Maroubra Beach', -33.950198, 151.259302, 1]
-// ];
 
-
-
-function setMarkers(map) {
+// function getLocalInfo(localNames, latLocal, longLocal){
+  function setMarkers(map) {
   // Adds markers to the map.
 
   // Marker sizes are expressed as a Size of X,Y where the origin of the image
@@ -131,6 +131,17 @@ function setMarkers(map) {
     coords: [1, 1, 1, 20, 18, 20, 18, 1],
     type: 'poly'
   };
+
+
+  var beaches = [
+  ['Bondi Beach', -33.890542, 151.274856, 4],
+  ['Coogee Beach', -33.923036, 151.259052, 5],
+  ['Cronulla Beach', -34.028249, 151.157507, 3],
+  ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+  ['Maroubra Beach', -33.950198, 151.259302, 1]
+];
+
+
   for (var i = 0; i < beaches.length; i++) {
     var beach = beaches[i];
     var marker = new google.maps.Marker({
@@ -140,6 +151,8 @@ function setMarkers(map) {
       shape: shape,
       title: beach[0],
       zIndex: beach[3]
-    });
+      });
+    }
+
   }
-}
+// }

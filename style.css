@@ -20,7 +20,7 @@ position: fixed;
 .nav1{
   height: 8vh;
   width: 10vw;
-  margin-left: 71vw;
+  margin-left: 70vw;
   margin-top: 1.1vh;
   position: absolute;
   z-index: 2;
@@ -30,8 +30,8 @@ position: fixed;
 
 .nav2{
   height: 8vh;
-  width: 15vw;
-  margin-left: 82vw;
+  width: 17vw;
+  margin-left: 81vw;
   margin-top: 1vh;
   position: absolute;
   z-index: 2;
@@ -44,17 +44,17 @@ position: fixed;
   position: absolute;
   font-size: 2.1em;
   font-family: myriad pro;
-  margin-left: 0vw;
+  margin-left: -.5vw;
+  letter-spacing: .7px;
 }
 #style-nav2{
   list-style-type: none;
   color: #3EE9EA;
   position: absolute;
   font-size: 2.1em;
-  margin-left: 0vw;
+  margin-left: ovw;
   font-family: myriad pro;
-  margin-top: 2.15vh;
-
+  margin-top: 2.25vh;
 }
 
 #style-nav2:hover{
@@ -83,6 +83,7 @@ position: fixed;
   z-index: 0;
   font-family: myriad pro;
   position: fixed;
+  letter-spacing: 1px;
 
 }
 
@@ -93,6 +94,7 @@ position: fixed;
   position: absolute;
   font-family: sans-serif;
   font-weight: 300;
+  letter-spacing: .7px;
 
 }
 #mainpic{
@@ -162,7 +164,7 @@ position: fixed;
   height: 10vh;
   width: 10vw;
   margin-top: -54.9vh;
-  margin-left: 40vw;
+  margin-left: 39vw;
   position: absolute;
   text-align: center;
 }
@@ -170,7 +172,7 @@ position: fixed;
   height: 8vh;
   width: 8vw;
   margin-top: -54vh;
-  margin-left: 50.5vw;
+  margin-left: 50.2vw;
   position: absolute;
   text-align: center;
   border-left:thick solid #EC866E;
@@ -180,15 +182,17 @@ position: fixed;
   font-size: 1.6em;
   font-weight: 200;
   font-family: sans-serif;
+  letter-spacing: .7px;
 }
 
 #slogan1{
   color: #EC866E;
   font-size: 1.8em;
   font-weight: 200;
-  margin-left: -1.3vw;
+  margin-left: -.5vw;
   margin-top: 2.2vh;
   font-family: sans-serif;
+  letter-spacing: .7px;
 }
 
 .find-your-site-background-location{
@@ -215,12 +219,13 @@ position: fixed;
 .find-your-site-style{
   width: 20vw;
   margin-top: 3.5vh;
-  margin-left: 2.8vw;
+  margin-left: 2.4vw;
   color: #fff;
   font-family: myriad pro;
   font-size: 1.6em;
   position: absolute;
   z-index: 2;
+  letter-spacing: 1px;
 }
 .text-box-location {
   height: 9vh;
@@ -306,7 +311,7 @@ position: fixed;
   margin-left: 45vw;
   background-color: black;
   opacity: .7;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 
 }
 .map-position{
@@ -339,6 +344,7 @@ position: fixed;
   z-index: 1;
   color: #EC866E;
   font-style: italic;
+  letter-spacing: 1px;
 
 }
 option{
