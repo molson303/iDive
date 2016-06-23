@@ -225,7 +225,7 @@ position: fixed;
   font-size: 1.6em;
   position: absolute;
   z-index: 2;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 }
 .text-box-location {
   height: 9vh;
@@ -280,7 +280,7 @@ position: fixed;
 
 .textColumnLeft{
   height: 75vh;
-  width: 37vw;
+  width: 33vw;
   position: absolute;
   z-index: 1;
   margin-top: -88vh;
@@ -291,13 +291,14 @@ position: fixed;
 
 .textColumnLeft1{
   height: 75vh;
-  width: 37vw;
+  width: 33vw;
   position: absolute;
   z-index: 1;
   margin-top: -88vh;
   margin-left: 3vw;
   background-color: transparent;
   overflow-y: scroll;
+  border: 1px solid transparent;
 }
 
 .text-column-bottom-right{
