@@ -4,7 +4,7 @@ var userInput = document.getElementsByTagName('input')[0]
 var textColumnLeft1 = document.getElementById('text-column-one')
 var localDive = document.getElementById('style-nav2')
 var script = document.createElement('script');
-var infowindow = document.getElementById('bottomRight')
+var bottomRight = document.getElementById('bottomRight')
 var long;
 var lat;
 var option;
@@ -20,6 +20,7 @@ var shape;
 var icon;
 var image;
 var marker;
+var localId;
 
 
 button.addEventListener("click", function(event) {
@@ -78,17 +79,20 @@ localDive.addEventListener("click", function(event) {
     if(httpRequest.status < 400){
       var object3 = JSON.parse(httpRequest.responseText)
       for (var i = 0; i < object3.sites.length; i++) {
+        localId = object3.sites[i].id;
         localName = object3.sites[i].name;
         localLat = Number(object3.sites[i].lat);
         localLong = Number(object3.sites[i].lng);
-        contentString = localName + " " + localLat + " " + localLong;
+        contentString = localName +":" + " " + "Lat" + " " + localLat + ", " + "Lng" + localLong + ", " + "iDive#" + " " + localId;
         localMarkers(map, contentString);
         map.setZoom(8);
         option = document.createElement("option")
         option1 = document.createElement("option")
         option2 = document.createElement("option")
         option3 = document.createElement("option")
+        option4 = document.createElement("option")
         optgroup = document.createElement('optgroup')
+
 
         textColumnLeft1.appendChild(optgroup)
         optgroup.innerHTML = "";
@@ -99,7 +103,9 @@ localDive.addEventListener("click", function(event) {
         textColumnLeft1.appendChild(option1)
         option1.innerHTML = "Latitude" + " " + object3.sites[i].lat + ", " + " " +"Longitude" + " " + object3.sites[i].lng;
         textColumnLeft1.appendChild(option2)
-        option2.innerHTML = object3.sites[i].distance + " " + "Miles from the Longitute and Latitude Coordinates"
+        option2.innerHTML = object3.sites[i].distance + " " + "Miles from your current location"
+        textColumnLeft1.appendChild(option4)
+        option4.innerHTML = "iDive #  " + " " + object3.sites[i].id;
         }
 
 

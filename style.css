@@ -128,7 +128,7 @@ position: fixed;
 .button-style{
   height: 7vh;
   width: 16vw;
-  background-color: #EF9E8B ;
+  background-color: #EF9E8B;
   color:#3EE9EA;
   font-size: 2.1em;
   font-weight: bold;
@@ -302,15 +302,15 @@ position: fixed;
 }
 
 .text-column-bottom-right{
-  height:20vh;
+  height:30vh;
   width:50vw;
   z-index: 1;
   position: absolute;
-  margin-top: -33vh;
+  margin-top: -31vh;
   margin-left: 45vw;
   background-color: black;
   opacity: .7;
-  /*border: 1px solid red;*/
+  border: 1px solid red;
 
 }
 .map-position{
@@ -378,4 +378,35 @@ p{
   margin-top: 3.4vh;
   border-radius: 50%;
   background-color: #EC866E;
+}
+
+.siteIDPosition{
+ border: 1px solid white;
+ height: 5vh;
+ width: 25vw;
+ margin-top: 1.5vh;
+ position: absolute;
+ z-index: 1;
+ margin-left: 45vw;
+ margin-top: -31vh;
+}
+
+.text1{
+  color: #fff;
+  font-family: myriad pro;
+  letter-spacing: .9px;
+  margin-top: .5vh;
+  margin-left: .5vw;
+}
+
+.color1{
+  color: #fff;
+}
+
+.color2{
+  color:#3EE9EA;
+}
+.input2{
+  
+
 }
