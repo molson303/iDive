@@ -4,6 +4,7 @@ var userInput = document.getElementsByTagName('input')[0]
 var textColumnLeft1 = document.getElementById('text-column-one')
 var localDive = document.getElementById('style-nav2')
 var script = document.createElement('script');
+var infowindow = document.getElementById('bottomRight')
 var long;
 var lat;
 var option;
@@ -18,6 +19,7 @@ var globName;
 var shape;
 var icon;
 var image;
+var infowindow;
 
 button.addEventListener("click", function(event) {
   httpRequest.onreadystatechange = function(){
@@ -74,7 +76,7 @@ function getDiveSites(lat, long){
     httpRequest.open('GET', 'http://api.divesites.com/?mode=sites&lat=' + lat +'&lng=' + long + '&dist=30')
     httpRequest.send();
 }
-
+// local dive search with the localbutton click
 localDive.addEventListener("click", function(event) {
   httpRequest.onreadystatechange = function(){
   if(httpRequest.readyState === 4){
@@ -94,11 +96,13 @@ localDive.addEventListener("click", function(event) {
         map.setZoom(8);
         map.panTo(marker.position);
 
+
         option = document.createElement("option")
         option1 = document.createElement("option")
         option2 = document.createElement("option")
         option3 = document.createElement("option")
         optgroup = document.createElement('optgroup')
+
         textColumnLeft1.appendChild(optgroup)
         optgroup.innerHTML = "";
         textColumnLeft1.appendChild(option)
@@ -118,6 +122,8 @@ localDive.addEventListener("click", function(event) {
       httpRequest.open('GET', 'http://api.divesites.com/?mode=&dist=60')
       httpRequest.send();
 });
+//end local dive search
+
 
 
 
@@ -127,16 +133,13 @@ function initMap() {
     center: {lat: 39.7392, lng: -104.9903}
   });
   setMarkers(map);
-  // goToPosition(map);
 }
 
-// function goToPosition(map){
-//   map.setCenter({lat: 39.7392, lng: -104.9903});
-//   new google.maps.Marker({
-//     position: {globLat, globalLong},
-//     map: map
-//   });
-// }
+
+
+
+
+
 
 
 function setMarkers(map) {

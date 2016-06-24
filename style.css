@@ -124,13 +124,12 @@ position: fixed;
   margin-left: 107vh;
   margin-top: -24vh;
   z-index: 1;
-  /*border: 1px solid black;*/
 }
 .button-style{
   height: 7vh;
   width: 16vw;
-  background-color: #EC866E;
-  color: black;
+  background-color: #EF9E8B ;
+  color:#3EE9EA;
   font-size: 2.1em;
   font-weight: bold;
   font-family: myriad-pro;
@@ -139,8 +138,8 @@ position: fixed;
 }
 
 .button-style:hover{
-  color: #3EE9EA;
-  background-color: #EF9E8B;
+  color: #EF9E8B ;
+  background-color: #3EE9EA;
 }
 
 
@@ -315,12 +314,12 @@ position: fixed;
 
 }
 .map-position{
-  height:40vh;
-  width:45vw;
+  height:55vh;
+  width:50vw;
   position: absolute;
   z-index: 1;
   margin-top: -88vh;
-  margin-left: 50vw;
+  margin-left: 45vw;
   background-color: black;
   opacity: .8;
   /*border: 1px solid red;*/
