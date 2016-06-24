@@ -12,8 +12,12 @@ var option2;
 var option3;
 var optgroup;
 var map;
-
-
+var globLat;
+var globLong;
+var globName;
+var shape;
+var icon;
+var image;
 
 button.addEventListener("click", function(event) {
   httpRequest.onreadystatechange = function(){
@@ -38,6 +42,18 @@ function getDiveSites(lat, long){
     if(httpRequest.status < 400){
       var object2 = JSON.parse(httpRequest.responseText)
         for (var i = 0; i < object2.sites.length; i++) {
+        globName = object2.sites[i].name;
+        globLat = Number(object2.sites[i].lat);
+        globLong = Number(object2.sites[i].lng);
+            marker = new google.maps.Marker({
+            position: {lat: globLat, lng: globLong},
+            map: map,
+            icon: image,
+            shape: shape,
+            icon: icon
+          });
+          map.setZoom(8);
+          map.panTo(marker.position);
         option = document.createElement("option")
         option1 = document.createElement("option")
         option2 = document.createElement("option")
@@ -68,11 +84,16 @@ localDive.addEventListener("click", function(event) {
         localName = object3.sites[i].name;
         localLat = Number(object3.sites[i].lat);
         localLong = Number(object3.sites[i].lng);
-        console.log(localLong)
-        var marker = new google.maps.Marker({
+          marker = new google.maps.Marker({
           position: {lat: localLat, lng: localLong},
-          map: map
+          map: map,
+          icon: image,
+          shape: shape,
+          icon: icon
         });
+        map.setZoom(8);
+        map.panTo(marker.position);
+
         option = document.createElement("option")
         option1 = document.createElement("option")
         option2 = document.createElement("option")
@@ -102,41 +123,40 @@ localDive.addEventListener("click", function(event) {
 
 function initMap() {
  map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 10,
-    center: {lat: -33.9, lng: 151.2}
+    zoom: 9,
+    center: {lat: 39.7392, lng: -104.9903}
   });
-
   setMarkers(map);
+  // goToPosition(map);
 }
 
+// function goToPosition(map){
+//   map.setCenter({lat: 39.7392, lng: -104.9903});
+//   new google.maps.Marker({
+//     position: {globLat, globalLong},
+//     map: map
+//   });
+// }
 
-var beaches = [
-  ['Bondi Beach', -33.890542, 151.274856, 4],
-
-];
 
 function setMarkers(map) {
-  console.log("lower:"+map);
-  var image = {
-    url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-    size: new google.maps.Size(20, 32),
-    origin: new google.maps.Point(0, 0),
-    anchor: new google.maps.Point(0, 32)
-  };
-
-  var shape = {
+    shape = {
     coords: [1, 1, 1, 20, 18, 20, 18, 1],
     type: 'poly'
   };
-  for (var i = 0; i < beaches.length; i++) {
-    var beach = beaches[i];
-    var marker = new google.maps.Marker({
-      position: {lat: beach[1], lng: beach[2]},
-      map: map,
-      icon: image,
-      shape: shape,
-      title: beach[0],
-      zIndex: beach[3]
-    });
-  }
+    icon = {
+    url: "https://images-na.ssl-images-amazon.com/images/I/31%2BAsK5M7dL.jpg", // url
+    scaledSize: new google.maps.Size(15, 15), // scaled size
+    origin: new google.maps.Point(0,0), // origin
+    anchor: new google.maps.Point(0, 0) // anchor
+
+};
+
 }
+
+
+
+// -- ~ 20 seconds about who you are and what problem your project solves
+// -- A walkthrough of your app ( ~ 1 minute )
+// -- A brief discussion of how your app works under the hood (~ 1 minute )
+// -- Challenges you faced and how you solved them ( ~ 1 minute )
