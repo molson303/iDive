@@ -48,10 +48,9 @@ function getDiveSites(lat, long){
         globName = object2.sites[i].name;
         globLat = Number(object2.sites[i].lat);
         globLong = Number(object2.sites[i].lng);
-          globalMarkers(map)
-          map.setZoom(8);
-          map.panTo(marker.position);
-          createInfoWindow(marker)
+        globalContent = globName + " " + globLat + " " + globLong
+          globalMarkers(map, globalContent)
+          map.setZoom(9);
         option = document.createElement("option")
         option1 = document.createElement("option")
         option2 = document.createElement("option")
@@ -82,12 +81,9 @@ localDive.addEventListener("click", function(event) {
         localName = object3.sites[i].name;
         localLat = Number(object3.sites[i].lat);
         localLong = Number(object3.sites[i].lng);
-
         contentString = localName + " " + localLat + " " + localLong;
-
         localMarkers(map, contentString);
         map.setZoom(8);
-        map.panTo(marker.position);//this takes you to the position of the markers
         option = document.createElement("option")
         option1 = document.createElement("option")
         option2 = document.createElement("option")
@@ -124,10 +120,8 @@ function initMap() {
     center: {lat: 39.7392, lng: -104.9903}
   });
   setMarkers(map);
-  // infowindow = new google.maps.InfoWindow({});
-
-
 }
+
 function setMarkers(map) {
     shape = {
     coords: [1, 1, 1, 20, 18, 20, 18, 1],
@@ -137,24 +131,20 @@ function setMarkers(map) {
     url: "https://images-na.ssl-images-amazon.com/images/I/31%2BAsK5M7dL.jpg", // url
     scaledSize: new google.maps.Size(15, 15), // scaled size
     origin: new google.maps.Point(0,0), // origin
-    // anchor: new google.maps.Point(0, 0) // anchor
-};
+  };
 }
 
-// function createInfoWindow(marker){
-//   marker.addListener('click', function() {
-//     infowindow.open(map, marker);
-//
-//     });
-// }
+
 function localMarkers(map, contentString){
 
   var infowindow = new google.maps.InfoWindow({
     content: contentString
+
   });
 
-marker = new google.maps.Marker({
-  position: {lat: localLat, lng: localLong},
+
+var marker = new google.maps.Marker({
+    position: {lat: localLat, lng: localLong},
     map: map,
     icon: image,
     shape: shape,
@@ -165,19 +155,18 @@ marker = new google.maps.Marker({
 
   marker.addListener('click', function() {
     infowindow.open(map, marker);
-    //  infowindow.position = {lat: localLat, lng: localLong};
-  });
 
+  });
+ map.panTo(marker.position);
 }
 
 
+function globalMarkers(map, globalContent){
+  var infowindow = new google.maps.InfoWindow({
+    content: globalContent
+  });
 
-
-
-
-
-function globalMarkers(map){
-  marker = new google.maps.Marker({
+var marker = new google.maps.Marker({
     position: {lat: globLat, lng: globLong},
     map: map,
     icon: image,
@@ -185,13 +174,11 @@ function globalMarkers(map){
     icon: icon,
     draggable: false,
     animation: google.maps.Animation.DROP
-
+  })
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
   });
-}
-
-
-function windowInformation(cs){
-
+  map.panTo(marker.position);
 }
 
 
