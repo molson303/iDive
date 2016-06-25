@@ -4,22 +4,28 @@ var userInput = document.getElementsByTagName('input')[0]
 var textColumnLeft1 = document.getElementById('text-column-one')
 var localDive = document.getElementById('style-nav2')
 var script = document.createElement('script');
-var bottomRight = document.getElementById('bottomRight')
+var extraInfo1 = document.getElementById('extraInfo1')
+var button2 = document.getElementById('button2')
+var userInput2  = document.getElementById('idive1')
 var long;
 var lat;
+
 var option;
 var option1;
 var option2;
 var option3;
 var optgroup;
+
 var map;
-var globLat;
-var globLong;
-var globName;
 var shape;
 var icon;
 var image;
 var marker;
+
+var globLat;
+var globLong;
+var globName;
+
 var localId;
 
 
@@ -123,6 +129,30 @@ localDive.addEventListener("click", function(event) {
 //end local dive search
 
 
+button2.addEventListener('click', function(event){
+event.preventDefault()
+httpRequest.onreadystatechange = function(){
+  if(httpRequest.readyState === 4){
+    if(httpRequest.status < 400){
+        var object4 = JSON.parse(httpRequest.responseText)
+        for (var i = 0; i < object4.urls.length; i++) {
+          console.log(object4.urls[i].name)
+          var h4 = document.createElement("h4")
+          var h5 = document.createElement("h5")
+          extraInfo1.appendChild(h4)
+          h4.innerHTML = object4.urls[i].name;
+          extraInfo1.appendChild(h5)
+          h5.innerHTML = object4.urls[i].url;
+
+        }
+
+
+      }
+    }
+  }
+  httpRequest.open('GET', 'http://api.divesites.com/?mode=detail&siteid=' + userInput2.value)
+  httpRequest.send();
+})
 
 
 function initMap() {

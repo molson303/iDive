@@ -1,3 +1,7 @@
+/*#EC866E This is the coral color*/
+/*#3EE9EA This is the light blue color*/
+
+
 .header{
   background-color: black;
   width: 100%;
@@ -60,6 +64,7 @@ position: fixed;
 #style-nav2:hover{
   color: #EC866E;
 }
+
 #style-nav1:hover{
   color: #EC866E;
 }
@@ -152,7 +157,7 @@ position: fixed;
 }
 
 .main-logo{
-  color: #fff;
+  color: #3EE9EA;
   font-size: 16em;
   text-align: center;
   margin-bottom: 10vh;
@@ -278,7 +283,7 @@ position: fixed;
 /******* PAGE 2 *******/
 
 .textColumnLeft{
-  height: 75vh;
+  height: 86vh;
   width: 37vw;
   position: absolute;
   z-index: 1;
@@ -289,7 +294,7 @@ position: fixed;
 }
 
 .textColumnLeft1{
-  height: 75vh;
+  height: 86vh;
   width: 37vw;
   position: absolute;
   z-index: 1;
@@ -301,18 +306,7 @@ position: fixed;
 
 }
 
-.text-column-bottom-right{
-  height:30vh;
-  width:50vw;
-  z-index: 1;
-  position: absolute;
-  margin-top: -31vh;
-  margin-left: 45vw;
-  background-color: black;
-  opacity: .7;
-  /*border: 1px solid red;*/
 
-}
 .map-position{
   height:55vh;
   width:50vw;
@@ -439,7 +433,7 @@ p{
   letter-spacing: .7px;
   font-size: 1.3em;
   font-weight: bolder;
-  color: #EF9E8B ;
+  color: #EF9E8B;
   background-color: #3EE9EA;
 }
 
@@ -447,15 +441,37 @@ p{
   background-color: #EF9E8B;
   color:#3EE9EA;
 }
+
+.text-column-bottom-right{
+  height:29vh;
+  width:50vw;
+  z-index: 1;
+  position: absolute;
+  margin-top: -31vh;
+  margin-left: 45vw;
+  background-color: black;
+  opacity: .7;
+  /*border: 1px solid red;*/
+}
 .extraInfo{
-  height: 22vh;
+  height: 21vh;
   width: 50vw;
-  border: 1px solid green;
+  /*border: 1px solid green;*/
   position: absolute;
   z-index: 1;
   margin-left: 45vw;
   margin-top: -23vh;
   background-color: transparent;
-
-
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+h4{
+  font-family: myriad pro;
+  color: #3EE9EA;
+  margin-left: 1vw;
+}
+h5{
+  color: #EC866E ;
+  font-family: myriad pro;
+  margin-left: 1.5vw;
 }
