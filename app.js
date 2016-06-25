@@ -49,13 +49,16 @@ function getDiveSites(lat, long){
         globName = object2.sites[i].name;
         globLat = Number(object2.sites[i].lat);
         globLong = Number(object2.sites[i].lng);
-        globalContent = globName + " " + globLat + " " + globLong
+        globId = object2.sites[i].id;
+        globalContent = globName +":" + " " + "Lat" + " " + globLat + ", " + "Lng" + globLong + ", " + "iDive#" + " " + globId;
           globalMarkers(map, globalContent)
           map.setZoom(9);
+
         option = document.createElement("option")
         option1 = document.createElement("option")
         option2 = document.createElement("option")
         option3 = document.createElement("option")
+        option4 =document.createElement("option")
         optgroup = document.createElement('optgroup')
         textColumnLeft1.appendChild(optgroup)
         optgroup.innerHTML = "";
@@ -65,6 +68,8 @@ function getDiveSites(lat, long){
         option1.innerHTML = "Latitude" + " " + object2.sites[i].lat + ", " + " " + "Longitude" + " " + object2.sites[i].lng;
         textColumnLeft1.appendChild(option2)
         option2.innerHTML = object2.sites[i].distance + " " + "Miles from the Longitute and Latitude of" + " " + userInput.value;
+        textColumnLeft1.appendChild(option4)
+        option4.innerHTML = "iDive #  " + " " + object2.sites[i].id;
             }
           }  //The lat and long is then passed into the dive API to retrieve the locations.
         }

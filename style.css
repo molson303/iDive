@@ -310,7 +310,7 @@ position: fixed;
   margin-left: 45vw;
   background-color: black;
   opacity: .7;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 
 }
 .map-position{
@@ -381,21 +381,21 @@ p{
 }
 
 .siteIDPosition{
- border: 1px solid white;
+ /*border: 1px solid white;*/
  height: 5vh;
  width: 25vw;
  margin-top: 1.5vh;
  position: absolute;
  z-index: 1;
  margin-left: 45vw;
- margin-top: -31vh;
+ margin-top: -29vh;
 }
 
 .text1{
   color: #fff;
   font-family: myriad pro;
   letter-spacing: .9px;
-  margin-top: .5vh;
+  margin-top: .3vh;
   margin-left: .5vw;
 }
 
@@ -406,7 +406,56 @@ p{
 .color2{
   color:#3EE9EA;
 }
-.input2{
-  
+.input2Position{
+  height: 5vh;
+  width: 10.5vw;
+  /*border: 1px solid yellow;*/
+  position: absolute;
+  z-index: 1;
+  margin-left: 69.8vw;
+  margin-top: -29.5vh;
+}
+
+#idive1{
+  height:4vh;
+  width: 10vw;
+}
+.button2Loc{
+  height: 5vh;
+  width: 10.5vw;
+  /*border: 1px solid green;*/
+  position: absolute;
+  z-index: 1;
+  margin-left: 81vw;
+  margin-top: -30vh;
+}
+
+#button2{
+  height:5vh;
+  width: 10vw;
+  margin-left: .5vw;
+  margin-top: .5vh;
+  font-family: myriad pro;
+  letter-spacing: .7px;
+  font-size: 1.3em;
+  font-weight: bolder;
+  color: #EF9E8B ;
+  background-color: #3EE9EA;
+}
+
+#button2:hover{
+  background-color: #EF9E8B;
+  color:#3EE9EA;
+}
+.extraInfo{
+  height: 22vh;
+  width: 50vw;
+  border: 1px solid green;
+  position: absolute;
+  z-index: 1;
+  margin-left: 45vw;
+  margin-top: -23vh;
+  background-color: transparent;
+
 
 }
