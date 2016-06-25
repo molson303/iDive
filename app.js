@@ -1,7 +1,7 @@
 var button = document.getElementById('btn')
 var httpRequest = new XMLHttpRequest();
 var userInput = document.getElementsByTagName('input')[0]
-var textColumnLeft1 = document.getElementById('text-column-one')
+var textColumnLeft1 = document.getElementById('leftColumnInput')
 var localDive = document.getElementById('style-nav2')
 var script = document.createElement('script');
 var extraInfo1 = document.getElementById('extraInfo1')
@@ -60,14 +60,12 @@ function getDiveSites(lat, long){
           globalMarkers(map, globalContent)
           map.setZoom(9);
 
-        option = document.createElement("option")
-        option1 = document.createElement("option")
-        option2 = document.createElement("option")
-        option3 = document.createElement("option")
-        option4 =document.createElement("option")
-        optgroup = document.createElement('optgroup')
-        textColumnLeft1.appendChild(optgroup)
-        optgroup.innerHTML = "";
+        option = document.createElement("h2")
+        option1 = document.createElement("p")
+        option2 = document.createElement("p")
+        option3 = document.createElement("p")
+        option4 =document.createElement("b")
+      
         textColumnLeft1.appendChild(option)
         option.innerHTML = object2.sites[i].name;
         textColumnLeft1.appendChild(option1)
@@ -97,16 +95,14 @@ localDive.addEventListener("click", function(event) {
         contentString = localName +":" + " " + "Lat" + " " + localLat + ", " + "Lng" + localLong + ", " + "iDive#" + " " + localId;
         localMarkers(map, contentString);
         map.setZoom(8);
-        option = document.createElement("option")
-        option1 = document.createElement("option")
-        option2 = document.createElement("option")
-        option3 = document.createElement("option")
-        option4 = document.createElement("option")
-        optgroup = document.createElement('optgroup')
+        option = document.createElement("h2")
+        option1 = document.createElement("p")
+        option2 = document.createElement("p")
+        option3 = document.createElement("p")
+        option4 = document.createElement("b")
 
 
-        textColumnLeft1.appendChild(optgroup)
-        optgroup.innerHTML = "";
+
         textColumnLeft1.appendChild(option)
         option.innerHTML = object3.sites[i].name;
         textColumnLeft1.appendChild(option3)

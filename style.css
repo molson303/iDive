@@ -290,9 +290,32 @@ position: fixed;
   margin-top: -88vh;
   margin-left: 3vw;
   background-color: black;
+  /*border: 1px solid green;*/
   opacity: .5;
 }
+.textColumnLeft1HeaderPosition{
+  width: 37vw;
+  height: 10vh;
+  position: absolute;
+  z-index: 1;
+  /*border: 1px solid white;*/
+  margin-top: -88vh;
+  margin-left: 3vw;
+}
+#textColumnLeft1Text{
+  color: #3EE9EA;
+  text-align: center;
+  font-family: myriad pro;
+  font-size: 2.7em;
+  margin: 2vh auto;
+  letter-spacing: .5px;
+  background-color: transparent;
 
+
+
+}
+
+/*//this is the select class*/
 .textColumnLeft1{
   height: 86vh;
   width: 37vw;
@@ -302,8 +325,18 @@ position: fixed;
   margin-left: 3vw;
   background-color: transparent;
   overflow-y: scroll;
-  border: 1px solid transparent;
+  /*border: 1px solid yellow;*/
+}
 
+.textColumnLeftInputLocation{
+  height: 76vh;
+  width: 37vw;
+  position: absolute;
+  z-index: 1;
+  /*border: 1px solid blue;*/
+  margin-top: -78vh;
+  margin-left: 3vw;
+  overflow-y: scroll;
 }
 
 
@@ -346,9 +379,7 @@ option{
   z-index: 1;
   text-align: center;
 }
-p{
-  color: white;
-}
+
 
 .circle{
   border: 1px solid #EC866E;
@@ -476,5 +507,22 @@ h5{
   font-family: myriad pro;
   margin-left: 1.8vw;
   font-size: 1em;
+}
 
+h2{
+  font-family: myriad pro;
+  color: #3EE9EA;
+  margin-left: 1vw;
+  font-size: 1.5em;
+}
+p{
+  color: white;
+  font-family: myriad pro;
+  margin-left: 1.8vw;
+}
+
+b{
+  color: #EC866E;
+  font-family: myriad pro;
+  margin-left: 1.8vw;
 }
