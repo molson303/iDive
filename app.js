@@ -131,6 +131,8 @@ localDive.addEventListener("click", function(event) {
 
 button2.addEventListener('click', function(event){
 event.preventDefault()
+extraInfo1.innerHTML = ("")
+
 httpRequest.onreadystatechange = function(){
   if(httpRequest.readyState === 4){
     if(httpRequest.status < 400){

@@ -290,7 +290,7 @@ position: fixed;
   margin-top: -88vh;
   margin-left: 3vw;
   background-color: black;
-  opacity: .6;
+  opacity: .5;
 }
 
 .textColumnLeft1{
@@ -335,7 +335,7 @@ position: fixed;
   font-size: 2em;
   text-align: center;
   z-index: 1;
-  color: #EC866E;
+  color: #3EE9EA;
   font-style: italic;
   letter-spacing: 1px;
 
@@ -450,7 +450,7 @@ p{
   margin-top: -31vh;
   margin-left: 45vw;
   background-color: black;
-  opacity: .7;
+  opacity: .5;
   /*border: 1px solid red;*/
 }
 .extraInfo{
@@ -469,9 +469,12 @@ h4{
   font-family: myriad pro;
   color: #3EE9EA;
   margin-left: 1vw;
+  font-size: 1.5em;
 }
 h5{
   color: #EC866E ;
   font-family: myriad pro;
-  margin-left: 1.5vw;
+  margin-left: 1.8vw;
+  font-size: 1em;
+
 }
