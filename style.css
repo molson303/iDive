@@ -405,6 +405,18 @@ option{
   background-color: #EC866E;
 }
 
+.circle3{
+  border: 2px solid #EC866E;
+  height: .3vh;
+  width: .2vw;
+  position: absolute;
+  z-index: 1;
+  margin-left: 14.25vw;
+  margin-top: -85.5vh;
+  border-radius: 50%;
+  background-color: #EC866E;
+}
+
 .siteIDPosition{
  /*border: 1px solid white;*/
  height: 5vh;
