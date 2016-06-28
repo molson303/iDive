@@ -34,6 +34,7 @@ button.addEventListener("click", function(event) {
   if(httpRequest.readyState === 4){
     if(httpRequest.status < 400){
       var object = JSON.parse(httpRequest.responseText)
+      console.log(object)
       long = (object.results[0].geometry.location.lng)
       lat = (object.results[0].geometry.location.lat);
       getDiveSites(lat, long);
@@ -42,7 +43,7 @@ button.addEventListener("click", function(event) {
       }    //here I am getting the latitude and Longitude from the location that requested.
     }
 
-    httpRequest.open('GET', 'https://maps.googleapis.com/maps/api/geocode/json?address=' + userInput.value +'&key=AIzaSyA42x7FNCeCrCZZiLRep6SE2sVWjT_dDrA')
+    httpRequest.open('GET', 'https://galvanize-cors-proxy.herokuapp.com/https://maps.googleapis.com/maps/api/geocode/json?address=' + userInput.value +'&key=AIzaSyA42x7FNCeCrCZZiLRep6SE2sVWjT_dDrA')
     httpRequest.send();
 })
 
@@ -65,7 +66,7 @@ function getDiveSites(lat, long){
         option2 = document.createElement("p")
         option3 = document.createElement("p")
         option4 =document.createElement("b")
-      
+
         textColumnLeft1.appendChild(option)
         option.innerHTML = object2.sites[i].name;
         textColumnLeft1.appendChild(option1)
@@ -78,7 +79,7 @@ function getDiveSites(lat, long){
           }  //The lat and long is then passed into the dive API to retrieve the locations.
         }
       }
-    httpRequest.open('GET', 'http://api.divesites.com/?mode=sites&lat=' + lat +'&lng=' + long + '&dist=30')
+    httpRequest.open('GET', 'https://galvanize-cors-proxy.herokuapp.com/http://api.divesites.com/?mode=sites&lat=' + lat +'&lng=' + long + '&dist=30')
     httpRequest.send();
 }
 // local dive search with the localbutton click
@@ -87,6 +88,7 @@ localDive.addEventListener("click", function(event) {
   if(httpRequest.readyState === 4){
     if(httpRequest.status < 400){
       var object3 = JSON.parse(httpRequest.responseText)
+      console.log(object3)
       for (var i = 0; i < object3.sites.length; i++) {
         localId = object3.sites[i].id;
         localName = object3.sites[i].name;
@@ -119,8 +121,11 @@ localDive.addEventListener("click", function(event) {
     }     //no lat or long needs to be passed into this since no parameters are used it defaults to the users location.
   }
 }
-      httpRequest.open('GET', 'http://api.divesites.com/?mode=&dist=60')
+      httpRequest.open('GET', 'http://api.divesites.com/')
       httpRequest.send();
+
+// ?mode=&dist=50
+// https://galvanize-cors-proxy.herokuapp.com/
 });
 //end local dive search
 
@@ -148,7 +153,7 @@ httpRequest.onreadystatechange = function(){
       }
     }
   }
-  httpRequest.open('GET', 'http://api.divesites.com/?mode=detail&siteid=' + userInput2.value)
+  httpRequest.open('GET', 'https://galvanize-cors-proxy.herokuapp.com/http://api.divesites.com/?mode=detail&siteid=' + userInput2.value)
   httpRequest.send();
 })
 
