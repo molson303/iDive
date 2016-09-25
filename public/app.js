@@ -29,12 +29,13 @@ var globName;
 var localId;
 
 
+
 button.addEventListener("click", function(event) {
+  console.log("click");
   httpRequest.onreadystatechange = function(){
   if(httpRequest.readyState === 4){
     if(httpRequest.status < 400){
       var object = JSON.parse(httpRequest.responseText)
-      console.log(object)
       long = (object.results[0].geometry.location.lng)
       lat = (object.results[0].geometry.location.lat);
       getDiveSites(lat, long);
@@ -117,15 +118,15 @@ localDive.addEventListener("click", function(event) {
         option4.innerHTML = "iDive #  " + " " + object3.sites[i].id;
         }
 
-
+          //figure out where I am then take the lat and long and send it
     }     //no lat or long needs to be passed into this since no parameters are used it defaults to the users location.
   }
 }
-      httpRequest.open('GET', 'http://api.divesites.com/')
+      httpRequest.open('GET', 'https://galvanize-cors-proxy.herokuapp.com/http://api.divesites.com/?mode&dist=100')
       httpRequest.send();
 
-// ?mode=&dist=50
-// https://galvanize-cors-proxy.herokuapp.com/
+//
+//
 });
 //end local dive search
 
