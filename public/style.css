@@ -2,6 +2,25 @@
 /*#3EE9EA This is the light blue color*/
 
 
+
+  h3 !important{
+    font-family: 'Montserrat', sans-serif;
+    color: red;
+    margin-left: 1vw;
+    font-size: 1.5em;
+  }
+  p{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 1.8vw;
+  }
+
+  b{
+    color: #EC866E;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 1.8vw;
+  }
+
   #main_image {
   background: url(images/main.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -90,7 +109,13 @@
 
 
 /*END MAIN PAGE */
-
+/*SECOND PAGE */
+.middle{
+  background-color: black;
+  border: 1px solid black;
+  width: 100%;
+}
+/*END SECOND PAGE */
 
 
   /*.iDive-position{
@@ -104,12 +129,6 @@
 
 
 
-  #mainpic-2{
-    height: 106vh;
-    width:100%;
-    margin: -3vh auto;
-    position: relative;
-  }
   .footer{
    background-color: black;
    width: 100%;
@@ -148,102 +167,31 @@
     border-left:thick solid #EC866E;
   }
 
-
-
-  .copyWloc{
-    margin-top: 1vh;
-    height:7vh;
-    width: 30vw;
-    display: absolute;
-    margin-left: 40vw;
-    border: 1px solid black;
-  }
-  #copywrite{
-    color: #fff;
-    font-family: myriad pro;
-    color: #3EE9EA;
-    font-size: 1em;
   }*/
 
 
 
 
+
+
   /******* PAGE 2 *******/
-
-  /*.textColumnLeft{
-    height: 86vh;
-    width: 37vw;
-    position: absolute;
-    z-index: 1;
-    margin-top: -88vh;
-    margin-left: 3vw;
-    background-color: black;
-    opacity: .5;
-  }
-  .textColumnLeft1HeaderPosition{
-    width: 37vw;
-    height: 10vh;
-    position: absolute;
-    z-index: 1;
-    margin-top: -88vh;
-    margin-left: 3vw;
-  }
-  #textColumnLeft1Text{
+  .textColumnLeft1Text{
     color: #3EE9EA;
-    text-align: center;
-    font-family: myriad pro;
-    font-size: 2.7em;
-    margin: 2vh auto;
-    letter-spacing: .5px;
-    background-color: transparent;
-
-
-
+    font-family: 'Montserrat', sans-serif;
   }
-
   .textColumnLeft1{
-    height: 86vh;
-    width: 37vw;
-    position: absolute;
-    z-index: 1;
-    margin-top: -88vh;
-    margin-left: 3vw;
-    background-color: transparent;
     overflow-y: scroll;
   }
-
   .textColumnLeftInputLocation{
-    height: 76vh;
-    width: 37vw;
-    position: absolute;
     z-index: 1;
-    margin-top: -78vh;
-    margin-left: 3vw;
     overflow-y: scroll;
   }
 
 
-  .map-position{
-    height:55vh;
-    width:50vw;
-    position: absolute;
-    z-index: 1;
-    margin-top: -88vh;
-    margin-left: 45vw;
-    background-color: black;
-    opacity: .8;
-  }
 
-  .middle{
-    background-color: black;
-    border: 1px solid black;
-    width: 100%;
-    height: 5vh;
-    margin-top: -5vh;
-    position: absolute;
-    z-index: 1;
-    opacity: .87;
-  }
+
+
+/*
   #sites{
     color: #fff;
     font-family: myriad pro;
@@ -355,37 +303,6 @@
 
 
 
-  /*h4{
-    font-family: myriad pro;
-    color: #3EE9EA;
-    margin-left: 1vw;
-    font-size: 1.5em;
-  }
-  h5{
-    color: #EC866E ;
-    font-family: myriad pro;
-    margin-left: 1.8vw;
-    font-size: 1em;
-  }
-
-  h2{
-    font-family: myriad pro;
-    color: #3EE9EA;
-    margin-left: 1vw;
-    font-size: 1.5em;
-  }
-  p{
-    color: white;
-    font-family: myriad pro;
-    margin-left: 1.8vw;
-  }
-
-  b{
-    color: #EC866E;
-    font-family: myriad pro;
-    margin-left: 1.8vw;
-  }*/
-
   @media only screen and (min-width: 320px) and (max-width: 375px) {
     .mobile-border{
       border-bottom: 1px solid #EC866E;
@@ -398,13 +315,13 @@
       text-align: right;
     }
     #idive-header{
-      margin-left: 2%;
+      margin-left: 10%;
     }
     #main_image{
       height: 100vh;
     }
     #image_two{
-      height: 100vh;
+      height: 120vh;
     }
     .main-logo{
       margin-top: 70%;
@@ -438,8 +355,48 @@
       letter-spacing: .5px;
 
     }
-    .btn-loc{
+    .middle{
+      height: 3vh;
+      margin-top: -3vh;
+      z-index: 1;
+      opacity: .87;
+    }
+    .textColumnLeft{
+      height: 45vh;
+      width: 100%;
+    }
+    .textColumnLeft1Text{
+      letter-spacing: .5px;
+      text-align: center;
+      font-size: 2em;
+    }
+    .textColumnLeft1{
+      border: 1px solid #EC866E;
+      height: 45vh;
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+    #map{
+      margin-top: 5%;
+      height: 60vh;
+      width: 100%;
+    }
+    .button-style{
       margin-top: 5%;
     }
+    .copyrite{
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1em;
+      text-align: center;
+      color: #3EE9EA;
+    }
+    .footer{
+      background-color: black;
+      padding-top: 2%;
+      padding-bottom: 2%;
 
+    }
 }

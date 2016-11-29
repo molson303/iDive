@@ -62,7 +62,7 @@ function getDiveSites(lat, long){
           globalMarkers(map, globalContent)
           map.setZoom(9);
 
-        option = document.createElement("h2")
+        option = document.createElement("h3")
         option1 = document.createElement("p")
         option2 = document.createElement("p")
         option3 = document.createElement("p")
@@ -98,7 +98,7 @@ localDive.addEventListener("click", function(event) {
         contentString = localName +":" + " " + "Lat" + " " + localLat + ", " + "Lng" + localLong + ", " + "iDive#" + " " + localId;
         localMarkers(map, contentString);
         map.setZoom(8);
-        option = document.createElement("h2")
+        option = document.createElement("h3")
         option1 = document.createElement("p")
         option2 = document.createElement("p")
         option3 = document.createElement("p")
