@@ -800,7 +800,7 @@
       height: 130vh;
     }
     .main-logo{
-      margin-top: 25%;
+      margin-top: 20%;
       font-size: 4em;
     }
     .slogan{
@@ -813,7 +813,7 @@
       width: 30%;
     }
     .find-your-site-background-location{
-      margin-top: 20%;
+      margin-top: 10%;
       padding-top: 5%;
       padding-bottom: 5%;
     }
@@ -830,7 +830,7 @@
     .button-style{
       font-size: 1.2em;
       letter-spacing: .5px;
-
+      margin-top: 3%;
     }
     .middle{
       height: 3vh;
@@ -861,9 +861,7 @@
       height: 60vh;
       width: 100%;
     }
-    .button-style{
-      margin-top: 5%;
-    }
+
     .copyrite{
       font-family: 'Montserrat', sans-serif;
       font-size: 1em;
@@ -916,7 +914,7 @@
       width: 30%;
     }
     .find-your-site-background-location{
-      margin-top: 40%;
+      margin-top: 10%;
       padding-top: 5%;
       padding-bottom: 5%;
     }
