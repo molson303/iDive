@@ -1,63 +1,45 @@
 /*#EC866E This is the coral color*/
 /*#3EE9EA This is the light blue color*/
 
-  .header{
+
+  #main_image {
+  background: url(images/main.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+  #image_two{
+    background: url(images/diver.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  #idive-header{
+    color: #3EE9EA;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .navbar{
     background-color: black;
-    width: 100%;
-    height: 11vh;
-    opacity: .7;
-    z-index: 2;
-    position: fixed;
+  }
+  .icon-bar{
+    background-color: #EC866E ;
   }
 
-  .header-text{
-  height: 8vh;
-  width: 40vw;
-  margin-left: 2.5vw;
-  z-index: 2;
-  font-family: myriad pro;
-  position: fixed;
-
-  }
-  /****NAV BAR****/
-  .nav1{
-    height: 8vh;
-    width: 10vw;
-    margin-left: 70vw;
-    margin-top: 1.1vh;
-    position: absolute;
-    z-index: 2;
-    position: fixed;
-    border-right: thick solid #EC866E;
-  }
-
-  .nav2{
-    height: 8vh;
-    width: 17vw;
-    margin-left: 81vw;
-    margin-top: 1vh;
-    position: absolute;
-    z-index: 2;
-    position: fixed;
-  }
 
   #style-nav1{
     list-style-type: none;
     color: #3EE9EA;
-    position: absolute;
-    font-size: 2.1em;
-    font-family: myriad pro;
-    margin-left: -.5vw;
-    letter-spacing: .7px;
+    font-family: 'Montserrat', sans-serif;
+
   }
   #style-nav2{
     list-style-type: none;
     color: #3EE9EA;
-    position: absolute;
-    font-size: 2.1em;
-    margin-left: ovw;
-    font-family: myriad pro;
-    margin-top: 2.25vh;
+    font-family: 'Montserrat', sans-serif;
   }
 
   #style-nav2:hover{
@@ -68,10 +50,50 @@
     color: #EC866E;
   }
 
+/*MAIN PAGE */
+
+  .main-logo{
+    color: #3EE9EA;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .slogan{
+    color: #fff;
+    font-weight: 200;
+    font-family: sans-serif;
+  }
+  .slogan1{
+    color: #EC866E;
+    font-weight: 200;
+    font-family: sans-serif;
+  }
+  .find-your-site-background-location{
+    background-color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .find-your-site-style{
+    color: #fff;
+  }
+  .button-style{
+    background-color: #EF9E8B;
+    color:#fff;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+
+  }
+  .button-style:hover{
+    color: #fff;
+    background-color: #3EE9EA;
+  }
 
 
-  /*****END NAV BAR*****/
-  .iDive-position{
+/*END MAIN PAGE */
+
+
+
+  /*.iDive-position{
     height:10vh;
     width: 8vw;
     position: absolute;
@@ -79,34 +101,9 @@
     margin-left: 2vw;
   }
 
-  #idive-header{
-    font-size: 3em;
-    color: #3EE9EA;
-    /*border: 1px solid yellow;*/
-    margin: 2.5vh 1vw auto;
-    z-index: 0;
-    font-family: myriad pro;
-    position: fixed;
-    letter-spacing: 1px;
 
-  }
 
-  #idive-header-slogan{
-    font-size: 1.3em;
-    color: #3EE9EA;
-    margin: 2.5vw 8.9vw auto;
-    position: absolute;
-    font-family: sans-serif;
-    font-weight: 300;
-    letter-spacing: .7px;
 
-  }
-  #mainpic{
-    height: 100vh;
-    width:100%;
-    margin: auto;
-    position: relative;
-  }
   #mainpic-2{
     height: 106vh;
     width:100%;
@@ -129,39 +126,9 @@
     margin-top: -24vh;
     z-index: 1;
   }
-  .button-style{
-    height: 7vh;
-    width: 16vw;
-    background-color: #EF9E8B;
-    color:#3EE9EA;
-    font-size: 2.1em;
-    font-weight: bold;
-    font-family: myriad-pro;
-    border-radius: 10px;
-    z-index: 2;
-  }
-
-  .button-style:hover{
-    color: #EF9E8B ;
-    background-color: #3EE9EA;
-  }
 
 
-  .main-logo-location{
-    height: 30vh;
-    width: 60vw;
-    position: absolute;
-    margin-left: 35vh;
-    margin-top: -105vh;
-  }
 
-  .main-logo{
-    color: #3EE9EA;
-    font-size: 16em;
-    text-align: center;
-    margin-bottom: 10vh;
-    font-family: myriad pro;
-  }
 
   .slogan-location{
     height: 10vh;
@@ -180,87 +147,9 @@
     text-align: center;
     border-left:thick solid #EC866E;
   }
-  .slogan{
-    color: #fff;
-    font-size: 1.6em;
-    font-weight: 200;
-    font-family: sans-serif;
-    letter-spacing: .7px;
-  }
 
-  #slogan1{
-    color: #EC866E;
-    font-size: 1.8em;
-    font-weight: 200;
-    margin-left: -.5vw;
-    margin-top: 2.2vh;
-    font-family: sans-serif;
-    letter-spacing: .7px;
-  }
 
-  .find-your-site-background-location{
-    height: 10vh;
-    width: 20vw;
-    margin-top: -35vh;
-    margin-left: 24.8vw;
-    position: absolute;
-    background-color: black;
-    opacity: .8;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    z-index: 1;
-  }
-  .find-your-site-background-location2{
-    height: 10vh;
-    width: 20vw;
-    position: absolute;
-    margin-left: 25vw;
-    margin-top: -35vh;
-    z-index: 3;
-  }
 
-  .find-your-site-style{
-    width: 20vw;
-    margin-top: 3.5vh;
-    margin-left: 2.4vw;
-    color: #fff;
-    font-family: myriad pro;
-    font-size: 1.6em;
-    position: absolute;
-    z-index: 2;
-    letter-spacing: 1px;
-  }
-  .text-box-location {
-    height: 9vh;
-    width: 50vw;
-    position: absolute;
-    margin-left: 46vh;
-    margin-top: -25vh;
-    background-color: black;
-    opacity: .8;
-    z-index: 1;
-    border-bottom-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
-  .text{
-    height: 5vh;
-    width: 30vw;
-    font-size: 20px;
-    font-style: oblique;
-    font-family: myriad pro;
-    margin-top: 1.5vh;
-    margin-left: 1.3vw;
-    background-color: #dbdbdb;
-  }
-  .text-input-location{
-    height: 9vh;
-    width: 33vw;
-    position: absolute;
-    margin-top: -25vh;
-    margin-left: 25vw;
-    z-index: 1;
-  }
   .copyWloc{
     margin-top: 1vh;
     height:7vh;
@@ -274,14 +163,14 @@
     font-family: myriad pro;
     color: #3EE9EA;
     font-size: 1em;
-  }
+  }*/
 
 
 
 
   /******* PAGE 2 *******/
 
-  .textColumnLeft{
+  /*.textColumnLeft{
     height: 86vh;
     width: 37vw;
     position: absolute;
@@ -289,7 +178,6 @@
     margin-top: -88vh;
     margin-left: 3vw;
     background-color: black;
-    /*border: 1px solid green;*/
     opacity: .5;
   }
   .textColumnLeft1HeaderPosition{
@@ -297,7 +185,6 @@
     height: 10vh;
     position: absolute;
     z-index: 1;
-    /*border: 1px solid white;*/
     margin-top: -88vh;
     margin-left: 3vw;
   }
@@ -314,7 +201,6 @@
 
   }
 
-  /*//this is the select class*/
   .textColumnLeft1{
     height: 86vh;
     width: 37vw;
@@ -324,7 +210,6 @@
     margin-left: 3vw;
     background-color: transparent;
     overflow-y: scroll;
-    /*border: 1px solid yellow;*/
   }
 
   .textColumnLeftInputLocation{
@@ -332,7 +217,6 @@
     width: 37vw;
     position: absolute;
     z-index: 1;
-    /*border: 1px solid blue;*/
     margin-top: -78vh;
     margin-left: 3vw;
     overflow-y: scroll;
@@ -348,7 +232,6 @@
     margin-left: 45vw;
     background-color: black;
     opacity: .8;
-    /*border: 1px solid red;*/
   }
 
   .middle{
@@ -380,44 +263,9 @@
   }
 
 
-  .circle{
-    border: 1px solid #EC866E;
-    height: 4.7vh;
-    width: 2.6vw;
-    position: absolute;
-    z-index: 1;
-    margin-left: 30.9vw;
-    margin-top: 22.7vh;
-    border-radius: 50%;
-    background-color: #EC866E;
-  }
 
-  .circle2{
-    border: 2px solid #EC866E;
-    height: .5vh;
-    width: .3vw;
-    position: fixed;
-    z-index: 2;
-    margin-left: 3.1vw;
-    margin-top: 3.4vh;
-    border-radius: 50%;
-    background-color: #EC866E;
-  }
 
-  .circle3{
-    border: 2px solid #EC866E;
-    height: .3vh;
-    width: .2vw;
-    position: absolute;
-    z-index: 1;
-    margin-left: 11.9vw;
-    margin-top: -85.2vh;
-    border-radius: 50%;
-    background-color: #EC866E;
-  }
-
-  .siteIDPosition{
-   /*border: 1px solid white;*/
+  /*.siteIDPosition{
    height: 5vh;
    width: 25vw;
    margin-top: 1.5vh;
@@ -445,7 +293,6 @@
   .input2Position{
     height: 5vh;
     width: 10.5vw;
-    /*border: 1px solid yellow;*/
     position: absolute;
     z-index: 1;
     margin-left: 69.8vw;
@@ -459,7 +306,6 @@
   .button2Loc{
     height: 5vh;
     width: 10.5vw;
-    /*border: 1px solid green;*/
     position: absolute;
     z-index: 1;
     margin-left: 81vw;
@@ -493,12 +339,10 @@
     margin-left: 45vw;
     background-color: black;
     opacity: .5;
-    /*border: 1px solid red;*/
   }
   .extraInfo{
     height: 21vh;
     width: 50vw;
-    /*border: 1px solid green;*/
     position: absolute;
     z-index: 1;
     margin-left: 45vw;
@@ -506,8 +350,12 @@
     background-color: transparent;
     overflow-x: scroll;
     overflow-y: scroll;
-  }
-  h4{
+  }*/
+
+
+
+
+  /*h4{
     font-family: myriad pro;
     color: #3EE9EA;
     margin-left: 1vw;
@@ -536,4 +384,62 @@
     color: #EC866E;
     font-family: myriad pro;
     margin-left: 1.8vw;
-  }
+  }*/
+
+  @media only screen and (min-width: 320px) and (max-width: 375px) {
+    .mobile-border{
+      border-bottom: 1px solid #EC866E;
+      border-top: 1px solid #EC866E;
+    }
+    .icon-bar{
+      margin-top: 30%;
+    }
+    .mobile_location{
+      text-align: right;
+    }
+    #idive-header{
+      margin-left: 2%;
+    }
+    #main_image{
+      height: 100vh;
+    }
+    #image_two{
+      height: 100vh;
+    }
+    .main-logo{
+      margin-top: 70%;
+      font-size: 4em;
+    }
+    .slogan{
+      font-size: 1.2em;
+      letter-spacing: .5px;
+    }
+
+    .main-hr{
+      border: 1px solid #EC866E;
+      width: 30%;
+    }
+    .find-your-site-background-location{
+      margin-top: 60%;
+      padding-top: 5%;
+      padding-bottom: 5%;
+    }
+    .find-your-site-style{
+      color: #fff;
+      font-size: 1.3em;
+      text-align: center;
+    }
+    .text-input{
+      text-align: center;
+    }
+
+    .button-style{
+      font-size: 1.2em;
+      letter-spacing: .5px;
+
+    }
+    .btn-loc{
+      margin-top: 5%;
+    }
+
+}

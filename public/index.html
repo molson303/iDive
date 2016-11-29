@@ -2,74 +2,85 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>iDive</title>
-    <!-- <link rel="stylesheet" href="presentation.css" media="screen" title="no title" charset="utf-8"> -->
     <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   </head>
 <body>
-    <header class="header"></header>
-  <section>
-    <div class="header-text">
-      <h5 id="idive-header-slogan">- &nbsp Diving Without Borders</h5>
-    </div>
-    <div class="iDive-position">
-      <h2 id="idive-header">iDive</h2>
-    </div>
-  </section>
-    <nav class="nav1">
-      <ul>
-        <a href="index.html">
-        <li id="style-nav1">Search</li>
-        </a>
-      </ul>
-    </nav>
-      <nav class="nav2">
-        <a href="#secondpage">
-        <li id="style-nav2">Local Dive Sites</li></a>
-      </ul></a>
-    </nav>
-    <main>
-      <div class="circle"></div>
-      <div class="circle2"></div>
-      <section>
-        <img id="mainpic" src="images/DSC_0012.JPG" alt="" />
-      </section>
-      <section>
-        <div class="main-logo-location">
+<nav class="navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <div class="">
+                    <h2 id="idive-header">iDive</h2>
+                  </div>
+
+              </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar navbar-nav">
+                      <li class="mobile-border">
+                          <a id="style-nav1" class="mobile_location" href="index.html">SEARCH</a>
+                      </li>
+                      <li class="">
+                          <a id="style-nav2" class="mobile_location" href="#secondpage">LOCAL DIVE SITES</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+    <div class="main-container" id="main_image">
+      <div class="container">
+        <div class="text-center">
           <h1 class="main-logo">iDive</h1>
         </div>
-      </section>
-      <section>
-        <div class="slogan-location">
-            <h3 class="slogan">International</h3>
+      </div>
+      <hr class="main-hr">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 text-center">
+            <p class="slogan">International Diving</p>
+          </div>
+
         </div>
-        <div class="slogan-location1">
-          <h3 id="slogan1">Diving</h3>
+      </div>
+    <div class="container">
+      <div class="col-xs-12 text-center">
+        <div class="find-your-site-background-location">
+          <p class="find-your-site-style">Find Your Dive Site</p>
+          <input id="textfield" class="text text-input" type="text" name="name" value=""  autofocus="" placeholder="Enter a City or State">
+
         </div>
-      </section>
-      <section>
-        <div class="find-your-site-background-location"></div>
-      </section>
-      <section>
-        <div class="find-your-site-background-location2">
-          <h3 class="find-your-site-style">Find Your Dive Site</h3>
-        </div>
-      </section>
-      <section>
-        <div class="text-box-location"></div>
-      </section>
-      <section>
-        <div class="text-input-location">
-          <input id="textfield" class="text" type="text" name="name" value=""  autofocus="" placeholder="Enter a City or State">
-        </div>
-      </section>
-    <section class="button-box">
-      <a href="#button">
-        <input id="btn" class="button-style" type="button" name="name" value="Let's Dive!"></a>
-      </section>
-    </main>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col-xs-12 btn-loc">
+        <a href="#button"><input id="btn" class="button-style btn btn-block" type="button" name="name" value="Let's Dive!"></a>
+      </div>
+    </div>
+</div>
 <div id="secondpage"></div>
+<div class="second-container" id="image_two">
+
+
+
+
+
+
+</div>
+
+
+
+      <!--
+
 <section class="middle"></section>
 <div id="button"></div>
 <section>
@@ -99,8 +110,12 @@
       <h4 id="copywrite">Copyright  &nbsp &copy2016 &nbsp - &nbsp Michael Olson </h4>
     </div>
   </div>
-</footer>
+</footer> -->
 <script type="text/javascript" src="app.js"></script>
+<script src="js/jquery1.js"></script>
+<script src="js/bootstrap.min1.js"></script>
+<script src="js/bootstrap1.js"></script>
+
 <script async defer
      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQCYF5J4WLoGgVdiF1R90FDDmWoVrMqP8&callback=initMap">
    </script>
