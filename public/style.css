@@ -312,6 +312,8 @@
     .slogan{
       font-size: 1.2em;
       letter-spacing: .5px;
+      font-family: 'Montserrat', sans-serif;
+
     }
 
     .main-hr{
@@ -327,10 +329,14 @@
       color: #fff;
       font-size: 1.3em;
       text-align: center;
+      font-family: 'Montserrat', sans-serif;
+
     }
     .text-input{
       text-align: center;
       width: 60%;
+      font-family: 'Montserrat', sans-serif;
+
     }
 
     .button-style{
