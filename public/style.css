@@ -3,10 +3,9 @@
 
 
 
-  h1, h2, h3, h4, h5 !important{
+  #leftColumnInput h3{
     font-family: 'Montserrat', sans-serif;
-    color: #fff;
-    margin-left: 1vw;
+    color: #3EE9EA;
     font-size: 1.5em;
   }
   p{
