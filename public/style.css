@@ -380,12 +380,11 @@
       background-color: black;
       padding-top: 2%;
       padding-bottom: 2%;
-
     }
 }
 
 
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
+  @media only screen and (min-width: 768px) {
     #style-nav1{
       border-right: 3px solid #EC866E;
     }
@@ -397,14 +396,15 @@
     #idive-header{
       margin-left: 120%;
     }
+
     #main_image{
-      height: 100vh;
-    }
-    #image_two{
       height: 120vh;
     }
+    #image_two{
+      height: 130vh;
+    }
     .main-logo{
-      margin-top: 30%;
+      margin-top: 20%;
       font-size: 4em;
     }
     .slogan{
@@ -417,7 +417,7 @@
       width: 30%;
     }
     .find-your-site-background-location{
-      margin-top: 20%;
+      margin-top: 10%;
       padding-top: 5%;
       padding-bottom: 5%;
     }
@@ -434,6 +434,7 @@
     .button-style{
       font-size: 1.2em;
       letter-spacing: .5px;
+      margin-top: 3%;
 
     }
     .middle{
@@ -465,9 +466,7 @@
       height: 60vh;
       width: 100%;
     }
-    .button-style{
-      margin-top: 5%;
-    }
+
     .copyrite{
       font-family: 'Montserrat', sans-serif;
       font-size: 1em;
@@ -480,10 +479,109 @@
       padding-bottom: 2%;
 
     }
+
+}
+@media only screen and (min-width: 626px) and (max-width: 767px) {
+  .mobile-border{
+    border-bottom: 1px solid #EC866E;
+    border-top: 1px solid #EC866E;
+  }
+  .icon-bar{
+    margin-top: 30%;
+  }
+  .mobile_location{
+    text-align: right;
+  }
+  #idive-header{
+    margin-left: 10%;
+  }
+  #main_image{
+    height: 120vh;
+  }
+  #image_two{
+    height: 130vh;
+  }
+  .main-logo{
+    margin-top: 20%;
+    font-size: 4em;
+  }
+  .slogan{
+    font-size: 1.2em;
+    letter-spacing: .5px;
+  }
+
+  .main-hr{
+    border: 1px solid #EC866E;
+    width: 30%;
+  }
+  .find-your-site-background-location{
+    margin-top: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  .find-your-site-style{
+    color: #fff;
+    font-size: 1.3em;
+    text-align: center;
+  }
+  .text-input{
+    text-align: center;
+    width: 60%;
+  }
+
+  .button-style{
+    font-size: 1.2em;
+    letter-spacing: .5px;
+    margin-top: 3%;
+
+  }
+  .middle{
+    height: 3vh;
+    margin-top: -3vh;
+    z-index: 1;
+    opacity: .87;
+  }
+  .textColumnLeft{
+    height: 45vh;
+    width: 100%;
+  }
+  .textColumnLeft1Text{
+    letter-spacing: .5px;
+    text-align: center;
+    font-size: 2em;
+  }
+  .textColumnLeft1{
+    border: 1px solid #EC866E;
+    height: 45vh;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  #map{
+    margin-top: 5%;
+    height: 60vh;
+    width: 100%;
+  }
+
+  .copyrite{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    text-align: center;
+    color: #3EE9EA;
+  }
+  .footer{
+    background-color: black;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+  }
+
+
 }
 
-
-  @media only screen and (min-width: 539px) and (max-width: 767px) {
+  @media only screen and (min-width: 539px) and (max-width: 625px) {
     .mobile-border{
       border-bottom: 1px solid #EC866E;
       border-top: 1px solid #EC866E;
@@ -498,13 +596,13 @@
       margin-left: 10%;
     }
     #main_image{
-      height: 100vh;
+      height: 115vh;
     }
     #image_two{
-      height: 120vh;
+      height: 130vh;
     }
     .main-logo{
-      margin-top: 40%;
+      margin-top: 20%;
       font-size: 4em;
     }
     .slogan{
@@ -534,6 +632,7 @@
     .button-style{
       font-size: 1.2em;
       letter-spacing: .5px;
+      margin-top: 3%;
 
     }
     .middle{
@@ -565,9 +664,7 @@
       height: 60vh;
       width: 100%;
     }
-    .button-style{
-      margin-top: 5%;
-    }
+
     .copyrite{
       font-family: 'Montserrat', sans-serif;
       font-size: 1em;
@@ -597,13 +694,13 @@
       margin-left: 10%;
     }
     #main_image{
-      height: 100vh;
+      height: 110vh;
     }
     #image_two{
-      height: 120vh;
+      height: 130vh;
     }
     .main-logo{
-      margin-top: 70%;
+      margin-top: 30%;
       font-size: 4em;
     }
     .slogan{
@@ -633,6 +730,7 @@
     .button-style{
       font-size: 1.2em;
       letter-spacing: .5px;
+      margin-top: 3%;
 
     }
     .middle{
@@ -664,9 +762,7 @@
       height: 60vh;
       width: 100%;
     }
-    .button-style{
-      margin-top: 5%;
-    }
+
     .copyrite{
       font-family: 'Montserrat', sans-serif;
       font-size: 1em;
@@ -701,10 +797,10 @@
       height: 100vh;
     }
     #image_two{
-      height: 120vh;
+      height: 130vh;
     }
     .main-logo{
-      margin-top: 70%;
+      margin-top: 25%;
       font-size: 4em;
     }
     .slogan{
@@ -804,10 +900,10 @@
       height: 100vh;
     }
     #image_two{
-      height: 120vh;
+      height: 130vh;
     }
     .main-logo{
-      margin-top: 70%;
+      margin-top: 30%;
       font-size: 4em;
     }
     .slogan{
@@ -863,9 +959,10 @@
       border-bottom-left-radius: 10px;
     }
     #map{
-      margin-top: 5%;
+      margin-top: 7%;
       height: 60vh;
       width: 100%;
+      margin-bottom: 5%;
     }
     .button-style{
       margin-top: 5%;
